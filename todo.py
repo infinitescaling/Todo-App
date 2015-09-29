@@ -23,8 +23,8 @@ class Todolist:
             self.list.remove(item)
     
     def save_list(self):
-        path = '/Users/scalingasan/projects/python/todo/'
-        os.remove(path+'listfile.txt')
+        path = os.getcwd()  
+        os.remove(path+'/listfile.txt')
         
         list_file = open('listfile.txt', 'w+')
         for item in self.list:
